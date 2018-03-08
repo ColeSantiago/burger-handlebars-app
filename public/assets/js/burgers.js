@@ -4,7 +4,7 @@ $(function() {
     let newDevour = $(this).data('newDevour');
 
     let newDevourState = {
-      devour: newDevour
+      devoured: 1
     };
 
     $.ajax('/api/burgers/' + id, {
