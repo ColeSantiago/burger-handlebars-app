@@ -1,0 +1,45 @@
+@import url('reset.css');
+
+body {
+	font-size: 18px;
+	line-height: 34px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	display: grid;
+	text-align: center; 
+	grid-template-areas: 
+    ". a a ."
+    ". b c ."
+    ". d d .";	
+}
+
+h1 {
+	grid-area: a;
+}
+
+.not-eaten {
+	grid-area: b;
+}
+
+.eaten {
+	grid-area: c;
+}
+
+.form-wrapper {
+	grid-area: d;
+}
+
+#true {
+	display: none;
+}
