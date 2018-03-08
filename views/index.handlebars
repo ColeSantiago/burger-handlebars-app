@@ -1,8 +1,8 @@
 <div class="wrapper">
   <h1>Eat-Da-Burger!</h1>
 
- 
-   
+  <div class="burger-photo-div"><img class="burger-photo" src="burger.png"></div>
+
       <ul class="not-eaten">
         {{#each burgers}}
           {{#unless devoured}}
@@ -13,7 +13,7 @@
       </ul>
     
     <div class="eaten">
-      <ul>
+      <ul class="eaten-burgers">
         {{#each burgers}}
           {{#if devoured}}
           {{> burgers/burger-block devoured=true}}

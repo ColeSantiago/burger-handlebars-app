@@ -1,8 +1,10 @@
 @import url('reset.css');
 
 body {
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 34px;
+	background: url('../img/dark_wood.png');
+	font-family: 'Signika', sans-serif;
 }
 
 * {
@@ -20,26 +22,82 @@ body {
 	text-align: center; 
 	grid-template-areas: 
     ". a a ."
-    ". b c ."
-    ". d d .";	
+    ". b b ."
+    ". c d ."
+    ". e e .";	
 }
 
 h1 {
 	grid-area: a;
+	color: white;
+	font-family: 'Patua One', cursive;
+	font-size: 50px;
+	margin: 20px;
 }
 
-.not-eaten {
+.burger-photo-div {
 	grid-area: b;
 }
 
-.eaten {
+.burger-photo {
+	max-width: 300px;
+	margin: 10px;
+}
+
+.not-eaten {
 	grid-area: c;
+	background: url('../img/linedpaper.png');
+	padding: 15px;
+}
+
+.eaten {
+	grid-area: d;
+	background: url('../img/linedpaper.png');
+	padding: 15px;
 }
 
 .form-wrapper {
-	grid-area: d;
+	grid-area: e;
+	color: white;
+	margin: 80px;
+}
+
+h2 {
+	font-size: 33px;
+}
+
+.add-burger {
+	font-family: 'Signika', sans-serif;
+	font-size: 15px;
+}
+
+.add-burger:hover {
+	cursor: pointer;
+	background: gray;
+}
+
+#burger-name {
+	height: 27px;
+}
+
+#false {
+	font-family: 'Signika', sans-serif;
+	font-size: 15px;
+	background: #c7ce7c
+}
+
+#false:hover {
+	cursor: pointer;
+	background: gray;
 }
 
 #true {
 	display: none;
 }
+
+.eaten-burgers {
+	opacity: 0.8px;
+	color: gray;
+}
+
+
