@@ -1,14 +1,14 @@
 $(function() {
-  $(".eat-burger").on("click", function(event) {
-    let id = $(this).data("id");
-    let newDevour = $(this).data("newDevour");
+  $('.eat-burger').on('click', function(event) {
+    let id = $(this).data('id');
+    let newDevour = $(this).data('newDevour');
 
     let newDevourState = {
       devour: newDevour
     };
 
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
+    $.ajax('/api/burgers/' + id, {
+      type: 'PUT',
       data: newDevourState
     }).then(
       function() {
@@ -17,19 +17,19 @@ $(function() {
     );
   });
 
-  $(".create-form").on("submit", function(event) {
+  $('.create-form').on('submit', function(event) {
     event.preventDefault();
     let newBurger = {
-      name: $("#burger-name").val().trim(),
-      devoured: $("[name=devoured]:checked").val().trim()
+      burger_name: '"' + $('#burger-name').val().trim() + '"',
+      devoured: 0
     };
-
-    $.ajax("/api/burgers", {
-      type: "POST",
+    console.log(newBurger);
+    $.ajax('/api/burgers', {
+      type: 'POST',
       data: newBurger
     }).then(
       function() {
-        console.log("created new burger");
+        console.log('created new burger');
         location.reload();
       }
     );
