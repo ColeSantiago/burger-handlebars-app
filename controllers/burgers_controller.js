@@ -3,7 +3,7 @@ const router = express.Router();
 const burger = require('../models/burger.js');
 
 // home page: grabs everything off of the database and displays it on the html with handlebars
-router.get('/index', function(req, res) {
+router.get('/', function(req, res) {
 	burger.selectAll(function(data) {
 		const burgersObject = {
 			burgers: data
