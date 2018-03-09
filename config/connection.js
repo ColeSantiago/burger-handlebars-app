@@ -4,7 +4,7 @@ let connection;
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-  const connection = mysql.createConnection({
+  connection = mysql.createConnection({
     port: 8889,
     host: "localhost",
     user: "root",
