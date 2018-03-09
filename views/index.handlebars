@@ -6,8 +6,7 @@
       <ul class="not-eaten">
         {{#each burgers}}
           {{#unless devoured}}
-          {{> burgers/burger-block devoured=false}}
-            
+          {{> burgers/burger-block devoured=false}}    
           {{/unless}}
         {{/each}}
       </ul>
@@ -22,18 +21,14 @@
       </ul>
     </div>
   
-
   <div class="form-wrapper">
     <h2>Add a Burger</h2>
       <form class="create-form">
-
         <div class="form-group">
           <label for="burger-name">Burger Name:</label>
           <input type="text" id="burger-name" name="name">
         </div>
-
         <button type="submit" class="add-burger">Add Burger</button>
       </form>
   </div>
-
 </div>

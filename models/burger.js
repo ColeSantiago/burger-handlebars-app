@@ -1,5 +1,6 @@
 const orm = require('../config/orm.js');
 
+// each of these will pass on the correct table, as well as all of the needed collums, values, conditions, and callback functions
 const burger = {
 	selectAll: function(cb) {
 		orm.selectAll('burgers', function(res) {
