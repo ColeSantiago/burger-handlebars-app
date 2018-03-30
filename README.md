@@ -13,5 +13,4 @@ How the app works for the user:
 
 *  The app will store every burger in a database, whether devoured or not.
 
-It can be run on a node server with a mysql database, or found at:
-https://burgerapp-colesantiago.herokuapp.com/
+It can be run on a node server with a mysql database, or found [here](https://burgerapp-colesantiago.herokuapp.com/)
