@@ -8,14 +8,16 @@ router.get('/', function(req, res) {
 		const burgersObject = {
 			burgers: data
 		};
-		console.log(burgersObject);
+		
     	res.render('index', burgersObject);
 	});
 });
 
 // post request that will put the new burgers into the database when they are submitted
 router.post('/api/burgers', function(req, res) {
+	console.log(req.body);
 	burger.insertOne(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], function(result) {
+		console.log(result);
 		res.json({ id: result.insertId });
 	});
 });

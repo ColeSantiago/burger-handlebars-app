@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 let connection;
 
+// if hosted on heroku, use herokus database, is not use your local one
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -8,7 +9,7 @@ if (process.env.JAWSDB_URL) {
     port: 8889,
     host: "localhost",
     user: "root",
-    password: "root",
+    password: null,
     database: "burgers_db"
   });
 };
